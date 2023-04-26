@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 987047922}
   - component: {fileID: 987047921}
   - component: {fileID: 987047920}
+  - component: {fileID: 987047925}
   m_Layer: 0
   m_Name: Camion
   m_TagString: Untagged
@@ -622,6 +623,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &987047925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987047919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b967e075a42ca4daf402c603850c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  turnSpeed: 5
 --- !u!1 &1853993828
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,14 +713,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853993828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.1017548, y: -0.7094255, z: 0.10469648, w: 0.6894927}
+  m_LocalPosition: {x: 7.42, y: 3.9, z: -0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.79, y: -91.633, z: 0}
 --- !u!1 &1953650335
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class ControlJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Registro del inputs de las teclas
+         // Registro del inputs de las teclas
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
         upInput = Input.GetAxis("Jump");

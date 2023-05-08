@@ -9,11 +9,23 @@ public class ControlJugador : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
     private float upInput;
+    private Rigidbody rigidBody;
+    private bool canJump;
+    public float jumpSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidBody = GetComponent<Rigidbody>();
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Floor")
+        {
+            canJump = true;
+        }
     }
 
     // Update is called once per frame
@@ -30,6 +42,15 @@ public class ControlJugador : MonoBehaviour
         transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
 
         /// Saltos del jugador
-        transform.Translate(Vector3.up * Time.deltaTime * speed * upInput);
+        //transform.Translate(Vector3.up * Time.deltaTime * speed * upInput);
+
+        if (canJump && upInput > 0)
+        {
+            Vector3 jumpForce = Vector3.up * jumpSpeed;
+            rigidBody.AddForce(jumpForce, ForceMode.Impulse);
+            canJump = false;
+            Debug.Log("Sucess" + jumpForce);
+        }   
+       
     }
 }

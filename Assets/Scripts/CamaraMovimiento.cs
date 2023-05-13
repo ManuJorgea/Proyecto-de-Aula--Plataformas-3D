@@ -5,7 +5,7 @@ using UnityEngine;
 public class CamaraMovimiento : MonoBehaviour
 {
     public GameObject player;
-    public Vector3 offset = new Vector3(9f, 4.5f, 0f);
+    public Vector3 offset = new Vector3(-9.68f, 5.46f, 0f);
 
     // Start is called before the first frame update
     void Start()

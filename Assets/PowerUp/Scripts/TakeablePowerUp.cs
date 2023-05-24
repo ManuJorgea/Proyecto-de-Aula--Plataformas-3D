@@ -9,12 +9,14 @@ public class TakeablePowerUp : MonoBehaviour {
 		//this.audio.clip = customPowerUp.pickUpSound;
 	}
 
-	void OnTriggerEnter (Collider collider) {
-		if(collider.tag == "Player") {
+	void OnCollisionEnter (Collision collider) {
+		Debug.Log("Collision");
+		if(collider.gameObject.tag == "Player") {
+			/*
 			PowerUpManager.Instance.Add(customPowerUp);
 			if(customPowerUp.pickUpSound != null){
 				AudioSource.PlayClipAtPoint(customPowerUp.pickUpSound, transform.position);
-			}
+			}*/
 			Destroy(transform.parent.gameObject);
 		}
 	}
